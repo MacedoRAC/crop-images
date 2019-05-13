@@ -1,0 +1,36 @@
+version: '3.5'
+services:
+    php:
+        image: macedo/laravel-php:7.1
+        volumes:
+            - ./:/var/www/
+        environment:
+            - VIRTUAL_HOST=crop-images.dvp
+        networks:
+            - crop-images-network
+            - nginx-proxy_proxy-network
+        expose:
+            - "80"
+
+    mysql:
+        image: mysql:5.7
+        volumes:
+          - cropImagesData:/var/lib/mysql
+        environment:
+          - "MYSQL_ROOT_PASSWORD=secret"
+          - "MYSQL_DATABASE=crop-images"
+          - "MYSQL_USER=homestead"
+          - "MYSQL_PASSWORD=secret"
+        ports:
+            - "3336:3306"
+        networks:
+            - crop-images-network
+
+volumes:
+    cropImagesData:
+
+networks:
+    crop-images-network:
+        name: crop-images-network
+    nginx-proxy_proxy-network:
+        external: true
