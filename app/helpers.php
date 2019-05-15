@@ -3,18 +3,11 @@
 use Illuminate\Support\Facades\Storage;
 use Intervention\Image\Facades\Image;
 
-function resizeImages($directory, $createDirectory = true)
+function resizeImages($directory)
 {
-	$basePathMedium = "photos/medium/";
-	$basePathThumbnails = "photos/thumbnails/";
-
-	if($createDirectory) {
-		$directoryName = basename($directory);
-		Storage::disk('local')->makeDirectory($directoryName);
-
-		$basePathMedium .= "{$directoryName}/";
-		$basePathThumbnails .= "{$directoryName}/";
-	}
+	$directoryName = basename($directory);
+	$basePathMedium = "photos/medium/{$directoryName}/";
+//	$basePathThumbnails = "photos/thumbnails/{$directoryName}/";
 
 	$images = Storage::disk('local')->files($directory);
 
@@ -24,7 +17,6 @@ function resizeImages($directory, $createDirectory = true)
 
 		resizeAndStoreToMedium($image, $basePathMedium.$filename);
 //		resizeAndStoreToThumbnail($image, $basePathThumbnails.$filename);
-
 	}
 }
 
@@ -32,14 +24,14 @@ function resizeAndStoreToMedium($image, $fullPath)
 {
 	$image = resizeTo($image, 800);
 
-	Storage::disk('local')->put($fullPath, $image);
+	Storage::disk('public')->put($fullPath, $image);
 }
 
 function resizeAndStoreToThumbnail($image, $fullPath)
 {
 	$image = resizeTo($image, 350);
 
-	Storage::disk('local')->put($fullPath, $image);
+	Storage::disk('public')->put($fullPath, $image);
 }
 
 function resizeTo($image, $width = null, $height = null)

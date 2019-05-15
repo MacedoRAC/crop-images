@@ -1,8 +1,12 @@
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+@import url('https://fonts.googleapis.com/css?family=Hammersmith+One');
 
-// Variables
-@import 'variables';
-
-// Bootstrap
-@import '~bootstrap/scss/bootstrap';
+// Template
+@import "./fonts/icomoon/style.css";
+@import "./fonts/icomoon/style.css";
+@import "./css/bootstrap.min.css";
+//@import "./css/jquery-ui.css";
+@import "./fonts/flaticon/font/flaticon.css";
+@import "./css/aos.css";
+@import "./css/style.css";
