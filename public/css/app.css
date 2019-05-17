@@ -1,10 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto+Mono);@import url(https://fonts.googleapis.com/css?family=Hammersmith+One);@font-face {
   font-family: 'icomoon';
-  src:  url('/fonts/icomoon.eot?10si43');
-  src:  url('/fonts/icomoon.eot?10si43#iefix') format('embedded-opentype'),
-    url('/fonts/icomoon.ttf?10si43') format('truetype'),
-    url('/fonts/icomoon.woff?10si43') format('woff'),
-    url('/fonts/icomoon.svg?10si43#icomoon') format('svg');
+  src:  url(/fonts/icomoon.eot?2cb8dc8186e8827cca3b6beebe4ef1c6);
+  src:  url(/fonts/icomoon.eot?2cb8dc8186e8827cca3b6beebe4ef1c6#iefix) format('embedded-opentype'),
+    url(/fonts/icomoon.ttf?bab8cf81a530d89b36f24a80649c5e25) format('truetype'),
+    url(/fonts/icomoon.woff?62f33c03d096cdc058166bd6fbf7e4d0) format('woff'),
+    url(/fonts/icomoon.svg?302fbc0aa5dcec40d385772d64baad2c#icomoon) format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -4929,12 +4929,12 @@
 
 @font-face {
   font-family: "Flaticon";
-  src: url("/fonts/flaticon/font/Flaticon.eot");
-  src: url("/fonts/flaticon/font/Flaticon.eot?#iefix") format("embedded-opentype"),
-       url("/fonts/flaticon/font/Flaticon.woff2") format("woff2"),
-       url("/fonts/flaticon/font/Flaticon.woff") format("woff"),
-       url("/fonts/flaticon/font/Flaticon.ttf") format("truetype"),
-       url("/fonts/flaticon/font/Flaticon.svg#Flaticon") format("svg");
+  src: url(/fonts/Flaticon.eot?2a583d5b95de67b43d9d09404b15e243);
+  src: url(/fonts/Flaticon.eot?2a583d5b95de67b43d9d09404b15e243?#iefix) format("embedded-opentype"),
+       url(/fonts/Flaticon.woff2?a5d596ab71d36724901d6f57a7bdbd6f) format("woff2"),
+       url(/fonts/Flaticon.woff?84dc66029ec7dd360e685cf4c20dce48) format("woff"),
+       url(/fonts/Flaticon.ttf?9cedc98d3b56d63604e0348e8647a9c0) format("truetype"),
+       url(/fonts/Flaticon.svg?9034797b6d25e292a296aeac689483a1#Flaticon) format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -4942,7 +4942,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: "Flaticon";
-    src: url("/fonts/flaticon/font/Flaticon.svg#Flaticon") format("svg");
+    src: url(/fonts/Flaticon.svg?9034797b6d25e292a296aeac689483a1#Flaticon) format("svg");
   }
 }
 
